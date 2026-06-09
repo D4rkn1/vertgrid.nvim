@@ -71,7 +71,7 @@ vim.api.nvim_create_autocmd({ "WinLeave", "BufLeave" }, {
 		vim.api.nvim_win_set_hl_ns(0, 0)
 	end,
 })
-vim.api.nvim_create_autocmd({ "WinEnter", "BufEnter", "CursorMoved" }, {
+vim.api.nvim_create_autocmd({ "WinEnter", "BufEnter", "CursorMoved", "CursorMovedI", "ModeChanged" }, {
 	group = ns_id,
 	callback = function()
 		vim.schedule(function()
